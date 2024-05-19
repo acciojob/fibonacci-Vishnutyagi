@@ -1,10 +1,10 @@
 
 function fibonacci(num) {
-	let arr=new Array();
-	arr.push(0);
-	arr.push(1);
-	for(let i=1; i<=num-2; i++){
-		arr.push(arr[i-2]+arr[i-1]);
+	let arr=new Array(num);
+	arr[0]=0;
+	arr[1]=1;
+	for(let i=2; i<num; i++){
+		arr[i]=(arr[i-2]+arr[i-1]);
 	}
 	return arr[num-1];
 }
